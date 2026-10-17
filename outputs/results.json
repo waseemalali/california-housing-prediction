@@ -1,0 +1,176 @@
+{
+  "housing": {
+    "dataset": "California Housing",
+    "fallback_data": false,
+    "rows": 20640,
+    "features": [
+      "MedInc",
+      "HouseAge",
+      "AveRooms",
+      "AveBedrms",
+      "Population",
+      "AveOccup",
+      "Latitude",
+      "Longitude"
+    ],
+    "target_mean": 2.0686,
+    "correlation_with_target": {
+      "MedInc": 0.688,
+      "AveRooms": 0.152,
+      "HouseAge": 0.106,
+      "AveOccup": -0.024,
+      "Population": -0.025,
+      "Longitude": -0.046,
+      "AveBedrms": -0.047,
+      "Latitude": -0.144
+    },
+    "split_sizes": {
+      "train": 16512,
+      "test": 4128
+    },
+    "baseline_test": {
+      "R2": -0.0002,
+      "MAE": 0.9061,
+      "RMSE": 1.1449,
+      "MAPE_%": 62.89,
+      "RMSPE_%": 97.41
+    },
+    "models": [
+      {
+        "model": "Linear",
+        "cv_r2": 0.6115,
+        "train": {
+          "R2": 0.6126,
+          "MAE": 0.5286,
+          "RMSE": 0.7197,
+          "MAPE_%": 31.5,
+          "RMSPE_%": 46.78
+        },
+        "test": {
+          "R2": 0.5758,
+          "MAE": 0.5332,
+          "RMSE": 0.7456,
+          "MAPE_%": 31.95,
+          "RMSPE_%": 55.44
+        }
+      },
+      {
+        "model": "Polynomial deg 2",
+        "cv_r2": -1.8847,
+        "train": {
+          "R2": 0.6853,
+          "MAE": 0.4608,
+          "RMSE": 0.6486,
+          "MAPE_%": 26.15,
+          "RMSPE_%": 39.97
+        },
+        "test": {
+          "R2": 0.6457,
+          "MAE": 0.467,
+          "RMSE": 0.6814,
+          "MAPE_%": 26.9,
+          "RMSPE_%": 50.76
+        }
+      },
+      {
+        "model": "Polynomial deg 3",
+        "cv_r2": -294528.6569,
+        "train": {
+          "R2": 0.7439,
+          "MAE": 0.4166,
+          "RMSE": 0.5851,
+          "MAPE_%": 24.24,
+          "RMSPE_%": 37.87
+        },
+        "test": {
+          "R2": -17.2689,
+          "MAE": 0.5332,
+          "RMSE": 4.8928,
+          "MAPE_%": 32.02,
+          "RMSPE_%": 306.49
+        }
+      },
+      {
+        "model": "Polynomial deg 5",
+        "cv_r2": -1710.7474,
+        "train": {
+          "R2": 0.0487,
+          "MAE": 0.8939,
+          "RMSE": 1.1277,
+          "MAPE_%": 60.79,
+          "RMSPE_%": 92.31
+        },
+        "test": {
+          "R2": -103.3509,
+          "MAE": 1.0672,
+          "RMSE": 11.6937,
+          "MAPE_%": 72.81,
+          "RMSPE_%": 722.73
+        }
+      },
+      {
+        "model": "Poly deg 5 + Ridge (extra)",
+        "cv_r2": -206.5196,
+        "train": {
+          "R2": 0.6214,
+          "MAE": 0.5221,
+          "RMSE": 0.7114,
+          "MAPE_%": 32.67,
+          "RMSPE_%": 49.63
+        },
+        "test": {
+          "R2": 0.597,
+          "MAE": 0.5267,
+          "RMSE": 0.7267,
+          "MAPE_%": 33.55,
+          "RMSPE_%": 60.17
+        }
+      }
+    ],
+    "linear_coefficients": {
+      "MedInc": 0.8544,
+      "AveBedrms": 0.3393,
+      "HouseAge": 0.1225,
+      "Population": -0.0023,
+      "AveOccup": -0.0408,
+      "AveRooms": -0.2944,
+      "Longitude": -0.8698,
+      "Latitude": -0.8969
+    },
+    "best_model": "Linear",
+    "final_test": {
+      "R2": 0.5758,
+      "MAE": 0.5332,
+      "RMSE": 0.7456,
+      "MAPE_%": 31.95,
+      "RMSPE_%": 55.44
+    },
+    "prediction_demo": [
+      {
+        "id": 20046,
+        "predicted": 0.719,
+        "actual": 0.477
+      },
+      {
+        "id": 3024,
+        "predicted": 1.764,
+        "actual": 0.458
+      },
+      {
+        "id": 15663,
+        "predicted": 2.71,
+        "actual": 5.0
+      },
+      {
+        "id": 20484,
+        "predicted": 2.839,
+        "actual": 2.186
+      },
+      {
+        "id": 9814,
+        "predicted": 2.605,
+        "actual": 2.78
+      }
+    ]
+  }
+}

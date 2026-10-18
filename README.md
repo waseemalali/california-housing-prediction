@@ -1,5 +1,7 @@
 # 🏠 California Housing Price Prediction: Regression Project
 
+Completed as part of the Qafzah Machine Learning Program.
+
 A regression project that predicts the median house value of California districts. It compares linear and polynomial regression against a naive baseline, uses cross-validation on training data only to pick the model, and shows clearly **why more complex models are not always better**.
 
 ## 📌 Overview

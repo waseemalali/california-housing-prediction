@@ -46,7 +46,7 @@ A regression project that predicts the median house value of California district
 pip install numpy pandas scikit-learn scipy matplotlib seaborn joblib
 python housing_all_in_one.py
 ```
-The first run downloads the dataset through scikit-learn (internet needed once). You can also predict a custom district:
+The dataset is included in `data/california_housing.csv`, so no internet is needed. You can also predict a custom district:
 ```bash
 python housing_all_in_one.py --set MedInc=5 --set HouseAge=20 --set Latitude=34
 ```
@@ -54,6 +54,8 @@ python housing_all_in_one.py --set MedInc=5 --set HouseAge=20 --set Latitude=34
 ## 📁 Project Structure
 ```
 ├── housing_all_in_one.py   # Full project in one script
+├── data/
+│   └── california_housing.csv  # Dataset (20,640 districts)
 ├── outputs/
 │   ├── figures/            # Charts
 │   └── results.json        # All metrics

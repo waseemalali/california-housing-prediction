@@ -101,6 +101,10 @@ from sklearn.preprocessing import PolynomialFeatures, StandardScaler
 def load_data():
     """California Housing. If it cannot be downloaded, use the Diabetes data
     that ships inside scikit-learn so the pipeline can still be demonstrated."""
+    local_csv = ROOT / "data" / "california_housing.csv"
+    if local_csv.exists():  # copy included in the repo -> works offline
+        df = pd.read_csv(local_csv)
+        return df.drop(columns="MedHouseVal"), df["MedHouseVal"], "California Housing", False
     try:
         from sklearn.datasets import fetch_california_housing
         d = fetch_california_housing(as_frame=True)
